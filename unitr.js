@@ -1,4 +1,4 @@
-var parseRegex = /^((?:\d+)|(?:\d+\.\d+)|(?:\.\d+))([^\.]*?)$/;
+var parseRegex = /^(-?(?:\d+)|(?:\d+\.\d+)|(?:\.\d+))([^\.]*?)$/;
 
 function parse(input){
     var valueParts = parseRegex.exec(input);

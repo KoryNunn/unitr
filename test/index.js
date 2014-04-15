@@ -7,16 +7,34 @@ grape('number to px', function(t){
     t.equal(unit(10, 'px'), '10px');
 });
 
+grape('negaive number to px', function(t){
+    t.plan(1);
+
+    t.equal(unit(-10, 'px'), '-10px');
+});
+
 grape('number to %', function(t){
     t.plan(1);
 
     t.equal(unit(10, '%'), '10%');
 });
 
+grape('negaive number to %', function(t){
+    t.plan(1);
+
+    t.equal(unit(-10, '%'), '-10%');
+});
+
 grape('number to default (px)', function(t){
     t.plan(1);
 
     t.equal(unit(10), '10px');
+});
+
+grape('negative number to default (px)', function(t){
+    t.plan(1);
+
+    t.equal(unit(-10), '-10px');
 });
 
 grape('united number to px isnt overridden', function(t){
@@ -36,6 +54,13 @@ grape('get value from px', function(t){
 
     t.equal(unit.parse('10px').value, 10);
 });
+
+grape('get negative value from px', function(t){
+    t.plan(1);
+
+    t.equal(unit.parse('-10px').value, -10);
+});
+
 
 grape('get value from %', function(t){
     t.plan(1);
