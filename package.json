@@ -1,0 +1,17 @@
+{
+  "name": "unitr",
+  "version": "0.0.0",
+  "description": "",
+  "main": "unitr.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node test"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "grape": "^0.1.10"
+  }
+}
