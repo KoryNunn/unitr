@@ -14,17 +14,27 @@ function parse(input){
 }
 
 function addUnit(input, unit){
-    var parsed = parse(input);
+    var parsedInput = parse(input),
+        parsedUnit = parse(unit);
 
-    if(!parsed){
+    if(!parsedInput && parsedUnit){
+        unit = input;
+        parsedInput = parsedUnit;
+    }
+
+    if(!isNaN(unit)){
+        unit = null;
+    }
+
+    if(!parsedInput){
         return input;
     }
 
-    if(parsed.unit == null || parsed.unit == ''){
-        parsed.unit = unit || 'px';
+    if(parsedInput.unit == null || parsedInput.unit == ''){
+        parsedInput.unit = unit || 'px';
     }
 
-    return parsed.value + parsed.unit;
+    return parsedInput.value + parsedInput.unit;
 };
 
 module.exports = addUnit;
