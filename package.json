@@ -1,7 +1,7 @@
 {
   "name": "unitr",
   "version": "1.1.0",
-  "description": "",
+  "description": "## What",
   "main": "unitr.js",
   "directories": {
     "test": "test"
@@ -9,9 +9,17 @@
   "scripts": {
     "test": "node test"
   },
-  "author": "",
+  "author": "Kory Nunn <knunn187@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "grape": "^0.1.10"
-  }
+    "tape": "^4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KoryNunn/unitr.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KoryNunn/unitr/issues"
+  },
+  "homepage": "https://github.com/KoryNunn/unitr#readme"
 }
